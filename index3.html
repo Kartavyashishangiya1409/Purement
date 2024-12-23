@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy CSS Code</title>
+    <style>
+        /* Styling for the div */
+        #styledDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 100px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: darkblue;
+            margin: 20px;
+            box-shadow: 10px salmon;
+        }
+    </style>
+</head>
+<body>
+    <div id="styledDiv">Copy</div>
+    <div id="styledDiv">Copy</div>
+    <div id="styledDiv">Copy</div>
+    <div id="styledDiv">Copy</div>
+    <div id="styledDiv">Copy</div>
+    <div id="styledDiv">Copy</div>
+    <div id="styledDiv">Copy</div>
+    <div id="styledDiv">Copy</div>
+  
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('styledDiv').addEventListener('click', function() {
+            // Get the div element
+            const div = document.getElementById('styledDiv');
+            // Extract computed styles
+            const computedStyles = window.getComputedStyle(div);
+
+            // Build the CSS string
+            const cssString = `
+                width: ${computedStyles.width};
+                height: ${computedStyles.height};
+                background-color: ${computedStyles.backgroundColor};
+                border: ${computedStyles.border};
+                border-radius: ${computedStyles.borderRadius};
+                text-align: ${computedStyles.textAlign};
+                line-height: ${computedStyles.lineHeight};
+                font-family: ${computedStyles.fontFamily};
+                font-size: ${computedStyles.fontSize};
+                color: ${computedStyles.color};
+            `;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(cssText).then(() => {
+              button.innerHTML="Copied...!";  // alert('CSS copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy CSS: ' + err);
+            });
+        });
+    </script>
+</body>
+</html>
