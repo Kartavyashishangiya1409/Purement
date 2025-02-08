@@ -1,4 +1,4 @@
-# Kartavya Project
+# Purement Project
 
 This is a web-based project built using HTML and CSS.
 
@@ -16,7 +16,7 @@ This is a web-based project built using HTML and CSS.
 
 ## 📂 Folder Structure
 ```
-kartavya/
+Purement/
 │── assets/       # Images and other assets
 │── index.html    # Main HTML file
 │── style.css     # Stylesheet for design
@@ -29,7 +29,7 @@ kartavya/
    ```
 2. Navigate to the project folder:
    ```bash
-   cd kartavya
+   cd Purement
    ```
 3. Open `index.html` in your browser or use Live Server for the best experience.
 
